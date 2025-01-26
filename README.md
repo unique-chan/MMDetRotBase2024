@@ -33,15 +33,15 @@
 
 * **Step 3.** Install `MMDet (2.28.2)`.
     ~~~
+    # ⚠️ You do not need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
     pip install -U openmim==0.3.9
     mim install mmcv-full==1.7.2
-    # ⚠️ You do not need to run "git clone -b 2.x https://github.com/open-mmlab/mmdetection". Already cloned in our repo!  
     pip install -v -e mmdetection/
     ~~~
 
 * **Step 4.** Install `MMRotate (0.3.4)`. 
     ~~~
-    # ⚠️ You do not need to run "git clone https://github.com/open-mmlab/mmrotate". Already cloned in our repo!
+    # ⚠️ You do not need to clone (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
     pip install -v -e mmrotate/
     ~~~
 
