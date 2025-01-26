@@ -1,5 +1,5 @@
 <h1 align="center" style="font-weight: 500; line-height: 1.4;">
-  Baseline Code for Research on Oriented Object Detection
+  Baseline Code for Oriented Object Detection
 </h1>
 
 <p align="center">
