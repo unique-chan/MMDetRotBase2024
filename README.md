@@ -31,9 +31,9 @@
     pip install torch==2.1.0 torchvision==0.16.0
     ~~~
 
-* **Step 3.** Install `MMDet (2.28.2)`.
+* **Step 3.** Install `MMDetection (2.28.2)`.
     ~~~
-    # ⚠️ You do not need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
+    # ⚠️ Do not need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
     pip install -U openmim==0.3.9
     mim install mmcv-full==1.7.2
     pip install -v -e mmdetection/
@@ -41,7 +41,7 @@
 
 * **Step 4.** Install `MMRotate (0.3.4)`. 
     ~~~
-    # ⚠️ You do not need to clone (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
+    # ⚠️ Do not need to clone MMRot (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
     pip install -v -e mmrotate/
     ~~~
 
