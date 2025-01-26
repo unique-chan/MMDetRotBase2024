@@ -47,12 +47,13 @@
 
     <details>
       <summary> To verify whether MMRotate is installed correctly, you may try the following things: </summary>
-    Step 4-1.
-    mim download mmrotate --config oriented_rcnn_r50_fpn_1x_dota_le90 --dest .
     
-    Step 4-2.
-    python mmrotate/demo/image_demo.py mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
-    
+    * ~~~
+      mim download mmrotate --config oriented_rcnn_r50_fpn_1x_dota_le90 --dest .
+      ~~~
+    * ~~~
+      python mmrotate/demo/image_demo.py mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
+      ~~~
     If **result.jpg** is generated correctly, it means that the environment is set up properly.
     </details>
 
