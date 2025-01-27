@@ -153,7 +153,7 @@ Examples:
 
 
 * Inference OrientedRCNN on DOTA-v1.0 **validation** split (with given labels), for the offline evaluation.
-  * Important: Change the two paths, `ann_file` and `img_prefix` of **data/test** in the config file (.py) for the **val** set or **trainval** set.
+  * Important: Change the two paths, `ann_file` and `img_prefix` of **data/test** in the config file (.py) for **val** or **trainval** sets.
    ~~~shell
    python ./mmrotate/tools/test.py  \
      oriented_rcnn_r50_fpn_1x_dota_le90.py \
