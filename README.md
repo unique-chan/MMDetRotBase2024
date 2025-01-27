@@ -31,7 +31,7 @@
     pip install torch==2.1.0 torchvision==0.16.0
     ~~~
 
-* **Step 3.** Install `MMDetection (2.28.2)` (2.28.2 is the latest version of 2024).
+* **Step 3.** Install `MMDetection (v2.28.2)` ([v2.28.2](https://mmdetection.readthedocs.io/en/v2.28.2/) is the latest version of 2024).
     ~~~
     # ⚠️ Do not need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
     pip install -U openmim==0.3.9
@@ -39,7 +39,7 @@
     pip install -v -e mmdetection/
     ~~~
 
-* **Step 4.** Install `MMRotate (0.3.4)` (0.3.4 is the latest version of 2024). 
+* **Step 4.** Install `MMRotate (v0.3.4)` ([v0.3.4](https://mmrotate.readthedocs.io/en/v0.3.4/) is the latest version of 2024). 
     ~~~
     # ⚠️ Do not need to clone MMRot (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
     pip install -v -e mmrotate/
@@ -48,12 +48,14 @@
     <details>
       <summary> To verify whether MMRotate is installed correctly, you may try the following things: </summary>
     
-    * ~~~
-      mim download mmrotate --config oriented_rcnn_r50_fpn_1x_dota_le90 --dest .
-      ~~~
-    * ~~~
-      python mmrotate/demo/image_demo.py mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
-      ~~~
+    * Download config and checkpoint files.
+      * ~~~
+        mim download mmrotate --config oriented_rcnn_r50_fpn_1x_dota_le90 --dest .
+        ~~~
+    * Verify the inference demo.
+      * ~~~
+        python mmrotate/demo/image_demo.py mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
+        ~~~
     If **result.jpg** is generated correctly, it means that the environment is set up properly.
     </details>
 
