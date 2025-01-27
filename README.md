@@ -26,7 +26,7 @@
     conda activate MMBase
     ~~~
 
-* **Step 2.** Install PyTorch with TorchVision following [official instructions](https://pytorch.org/get-started/locally/). The below is an example.
+* **Step 2.** Install PyTorch with TorchVision following [official instructions](https://pytorch.org/get-started/locally/). The below is an example. We do not recommend PyTorch 2.x, especially for multi-gpu settings.
     ~~~shell
     pip install torch==1.10.2+cu113 torchvision==0.11.3+cu113 -f https://download.pytorch.org/whl/torch_stable.html  
     ~~~
@@ -49,11 +49,11 @@
       <summary> To verify whether MMRotate is installed correctly, you may try the following things: </summary>
     
     * Download config and checkpoint files.
-      * ~~~shell
+        ~~~shell
         mim download mmrotate --config oriented_rcnn_r50_fpn_1x_dota_le90 --dest .
         ~~~
     * Verify the inference demo.
-      * ~~~shell
+        ~~~shell
         python mmrotate/demo/image_demo.py \
         mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py \
         oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
@@ -133,32 +133,39 @@ Examples:
     
 </details>
 
-~~~shell
-python ./mmrotate/tools/test.py  \
-  oriented_rcnn_r50_fpn_1x_dota_le90.py \
-  oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --format-only \
-  --eval-options submission_dir=work_dirs/Task1_results 
-~~~
+* Inference OrientedRCNN on DOTA-v1.0 **test** split (without labels), for [online submission](https://captain-whu.github.io/DOTA/evaluation.html).
+    ~~~shell
+    python ./mmrotate/tools/test.py  \
+      oriented_rcnn_r50_fpn_1x_dota_le90.py \
+      oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --format-only \
+      --eval-options submission_dir=work_dirs/Task1_results 
+    ~~~
+  <details>
+      <summary> For multi-gpu parallel inference, </summary>
+  
+  ~~~shell
+  mmrotate/tools/dist_test.sh  \
+    oriented_rcnn_r50_fpn_1x_dota_le90.py \
+    oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth 1 --format-only \
+    --eval-options submission_dir=work_dirs/Task1_results
+  ~~~
+    </details>
 
 
-* Inference 
-~~~shell
-CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 \
-  mmrotate/tools/test.py \
-  oriented_rcnn_r50_fpn_1x_dota_le90.py \
-  oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth \
-  --format-only \
-  --eval-options submission_dir=work_dirs/Task1_results 
-~~~
-
-~~~shell
-CUDA_VISIBLE_DEVICES=0 ./mmrotate/tools/dist_test.sh \
- oriented_rcnn_r50_fpn_1x_dota_le90.py \ 
- oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth 1 --format-only \ 
- --eval-options submission_dir=work_dirs/Task1_results 
-~~~
-
-* .
-
-* .
+* Inference OrientedRCNN on DOTA-v1.0 **validation** split (with given labels), for the offline evaluation.
+  * Important: Change the two paths, `ann_file` and `img_prefix` of **data/test** in the config file (.py) for the **val** set or **trainval** set.
+   ~~~shell
+   python ./mmrotate/tools/test.py  \
+     oriented_rcnn_r50_fpn_1x_dota_le90.py \
+     oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --eval mAP
+   ~~~
+  <details>
+      <summary> For multi-gpu parallel inference, </summary>
+  
+  ~~~shell
+  mmrotate/tools/dist_test.sh  \
+    oriented_rcnn_r50_fpn_1x_dota_le90.py \
+    oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth 1 --eval mAP
+  ~~~
+    </details>
 
