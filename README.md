@@ -56,6 +56,6 @@
       * ~~~
         python mmrotate/demo/image_demo.py mmrotate/demo/demo.jpg oriented_rcnn_r50_fpn_1x_dota_le90.py oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --out-file result.jpg
         ~~~
-    If **result.jpg** is generated correctly, it means that the environment is set up properly.
+    * If **result.jpg** is generated correctly, it means that the environment is set up properly.
     </details>
 
