@@ -33,7 +33,7 @@
 
 * **Step 3.** Install `MMDetection (v2.28.2)` ([v2.28.2](https://mmdetection.readthedocs.io/en/v2.28.2/) is the latest version of 2024).
     ~~~
-    # ⚠️ Do not need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
+    # ⚠️ No need to clone MMDet (e.g. "git clone -b 2.x https://github.com/open-mmlab/mmdetection"). Already cloned! 
     pip install -U openmim==0.3.9
     mim install mmcv-full==1.7.2
     pip install -v -e mmdetection/
@@ -41,7 +41,7 @@
 
 * **Step 4.** Install `MMRotate (v0.3.4)` ([v0.3.4](https://mmrotate.readthedocs.io/en/v0.3.4/) is the latest version of 2024). 
     ~~~
-    # ⚠️ Do not need to clone MMRot (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
+    # ⚠️ No need to clone MMRot (e.g. "git clone https://github.com/open-mmlab/mmrotate"). Already cloned!
     pip install -v -e mmrotate/
     ~~~
 
