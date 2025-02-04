@@ -18,6 +18,9 @@
 * Training & test code for oriented object detection
 * **[NOTE]** We only consider single-machine multi-GPU scenarios and do not address cases involving multiple nodes and using Slurm. For explanations related to multi-machine setups and Slurm, please refer to the official documentation of [MMDetection](https://mmdetection.readthedocs.io/en/v2.28.2/) and [MMRotate](https://mmrotate.readthedocs.io/en/v0.3.4/).
 
+### Announcement:
+* 4 Feb. 2025: We modified _crop_data() in RRandomCrop in the original MMRotate code (v0.3.4). Now we can use `RRandomCrop` in train/val/test pipelines of your configuration file without bbox mismatch error! 👏
+
 ### Preliminaries:
 
 
