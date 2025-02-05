@@ -19,8 +19,8 @@
 * **[NOTE]** We only consider single-machine multi-GPU scenarios and do not address cases involving multiple nodes and using Slurm. For explanations related to multi-machine setups and Slurm, please refer to the official documentation of [MMDetection](https://mmdetection.readthedocs.io/en/v2.28.2/) and [MMRotate](https://mmrotate.readthedocs.io/en/v0.3.4/).
 
 ### Announcement:
+* 5 Feb. 2025: We modified _crop_data() of `RRandomCrop` in the original MMRotate code (v0.3.4). Now we can use the transform named `RRandomCrop` in train/val/test pipelines of your configuration file without bbox mismatch error! 👏
 * 4 Feb. 2025: We modified `print_map_summary()` of eval_map.py in the original MMRotate code (v0.3.4) in order to avoid runtime error when #classes of model > #classes of given data! 👏
-* 4 Feb. 2025: We modified _crop_data() of `RRandomCrop` in the original MMRotate code (v0.3.4). Now we can use the transform named `RRandomCrop` in train/val/test pipelines of your configuration file without bbox mismatch error! 👏
 
 ### Preliminaries:
 
